@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.csci571.koy.hw9">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB6Z330UJ2K9W18E1EeFyfYE7sIwv2uonQ" />
+
+        <service android:name=".services.GPS_Service" />
+
+        <!-- Main Activity (Search Form and Favorites Activity -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/places"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Search Results Activity -->
+        <!-- child activity of main activity -->
+        <activity
+            android:name=".activity.SearchResultsActivity"
+            android:label="@string/search_results"
+            android:parentActivityName=".activity.MainActivity">
+
+            <!-- for versions 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csci571.koy.hw9.activity.MainActivity" />
+        </activity>
+
+        <!-- Places Details Activity -->
+
+        <activity
+            android:name=".activity.PlacesDetailActivity"
+            android:label="@string/title_activity_places_detail"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.csci571.koy.hw9.activity.SearchResultsActivity" />
+
+        </activity>
+    </application>
+
+</manifest>

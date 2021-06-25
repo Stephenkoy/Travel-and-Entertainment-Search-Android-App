@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">hw9</string>
+    <string name="places">Places Search</string>
+
+    <!-- search form string resources -->
+    <string name="search">Search</string>
+    <string name="keyword">Keyword</string>
+    <string name="keywordPlaceHolder">Enter keyword</string>
+
+    <string name="category">Category</string>
+    <!-- Category Strings -->
+    <string-array name="category_array">
+        <item>Default</item>
+        <item>Airport</item>
+        <item>Amusement Park</item>
+        <item>Aquarium</item>
+        <item>Art Gallery</item>
+        <item>Bakery</item>
+        <item>Bar</item>
+        <item>Beauty Salon</item>
+        <item>Bowling Alley</item>
+        <item>Bus Station</item>
+        <item>Cafe</item>
+        <item>Campground</item>
+        <item>Car Rental</item>
+        <item>Casino</item>
+        <item>Lodging</item>
+        <item>Movie Theater</item>
+        <item>Museum</item>
+        <item>Night Club</item>
+        <item>Park</item>
+        <item>Parking</item>
+        <item>Restaurant</item>
+        <item>Shopping Mall</item>
+        <item>Stadium</item>
+        <item>Subway Station</item>
+        <item>Taxi Stand</item>
+        <item>Train Station</item>
+        <item>Transit Station</item>
+        <item>Travel Agency</item>
+        <item>Zoo</item>
+    </string-array>
+
+    <string name="distance">Distance (in miles)</string>
+    <string name="distance_placeholder">Enter distance (default 10 miles)</string>
+    <string name="from">From</string>
+    <string name="here">Current Location</string>
+    <string name="otherLocation">Other, Please Specify</string>
+    <string name="customLocationPlaceholder">Type in the Location</string>
+    <string name="clear">Clear</string>
+    <string name="errorText">Please enter mandatory field</string>
+
+    <string name="favorites">Favorites</string>
+
+    <!-- Search Results String Values -->
+    <string name="search_results">Search Results</string>
+    <string name="previous_page">Previous</string>
+    <string name="next_page">Next</string>
+    <string name="content">Category Icon</string>
+    <string name="errorCode">Error</string>
+
+    <!-- Places Details Strings -->
+    <string name="place_name">Place Name Holder</string>
+
+    <!-- Info Strings -->
+    <string name="info">Info</string>
+    <string name="info_address">Address</string>
+    <string name="phone">Phone Number</string>
+    <string name="price_level">Price Level</string>
+    <string name="info_rating">Rating</string>
+    <string name="google_page">Google Page</string>
+    <string name="website">Website</string>
+
+    <!-- Photo strings -->
+    <string name="photos">Photos</string>
+    <string name="no_photos">No Photos Found</string>
+
+    <!-- Map Strings -->
+    <string name="map">Map</string>
+    <string name="travel_label">Travel Mode</string>
+    <string-array name="travel_mode_array">
+        <item>Driving</item>
+        <item>Bicycling</item>
+        <item>Transit</item>
+        <item>Walking</item>
+    </string-array>
+    <!-- Review Fragment Strings -->
+    <string name="reviews">Reviews</string>
+    <string name="no_reviews">No Reviews Found</string>
+    <string-array name="reviewType">
+        <item>Google reviews</item>
+        <item>Yelp reviews</item>
+    </string-array>
+    <!-- review sort strings -->
+    <string-array name="reviewOrderType">
+        <item>Default order</item>
+        <item>Highest rating</item>
+        <item>Lowest rating</item>
+        <item>Most recent</item>
+        <item>Least recent</item>
+    </string-array>
+    <!-- Reviews error messages -->
+    <string name="noGoogleReviews">No Google Reviews Found</string>
+    <string name="noYelpReviews">No Yelp Reviews Found</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_places_detail">PlacesDetailActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+</resources>

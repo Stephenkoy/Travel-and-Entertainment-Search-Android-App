@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Some Code Ideas used from Mitch Tabian -->
+<!-- https://github.com/mitchtabian/TabFragments/tree/master/TabFragments -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/labelKeyword"
+            android:labelFor="@+id/editKeyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/keyword" />
+        <TextView
+            android:id="@+id/keywordError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:visibility="gone"
+            android:textColor="@color/error"
+            android:text="@string/errorText"
+            />
+        <EditText
+            android:id="@+id/inputKeyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="-4dp"
+            android:ems="10"
+            android:inputType="textAutoCorrect"
+            android:hint="@string/keywordPlaceHolder"/>
+
+        <TextView
+            android:id="@+id/labelCategory"
+            android:labelFor="@+id/category_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/category" />
+
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="14dp" />
+
+        <TextView
+            android:id="@+id/labelDistance"
+            android:labelFor="@+id/editDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/distance" />
+
+        <EditText
+            android:id="@+id/inputDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="-4dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/distance_placeholder" />
+
+        <TextView
+            android:id="@+id/labelLocation"
+            android:labelFor="@+id/editDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="0dp"
+            android:hint="@string/from" />
+
+        <LinearLayout
+            android:id="@+id/radioButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="14dp"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/locationGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioHere"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/here" />
+
+                <RadioButton
+                    android:id="@+id/radioCustomLooation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/otherLocation"
+                    android:labelFor="@+id/customLocation"/>
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/customLocationError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:visibility="gone"
+                android:textColor="@color/error"
+                android:text="@string/errorText"
+                />
+
+            <!-- Places Autocomplete Fragment -->
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-4dp"
+                android:inputType="text"
+                android:enabled="false"
+                android:hint="@string/customLocationPlaceholder" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/searchBTN"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_weight="2"
+                android:text="@string/search" />
+
+            <Button
+                android:id="@+id/clearBTN"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="14dp"
+                android:layout_weight="2"
+                android:text="@string/clear" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
